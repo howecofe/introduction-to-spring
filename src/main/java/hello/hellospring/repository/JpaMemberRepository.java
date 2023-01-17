@@ -22,7 +22,7 @@ public class JpaMemberRepository implements MemberRepository {
     }
 
     @Override
-    public Optional<Member> findByID(Long id) {
+    public Optional<Member> findById(Long id) {
         Member member = em.find(Member.class, id); //id 는 primary key
         return Optional.ofNullable(member);
     }

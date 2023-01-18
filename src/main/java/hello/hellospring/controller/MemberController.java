@@ -28,6 +28,9 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+
+        // 실제로 프록시가 주입되는지 콘솔에 출력해서 확인
+//        System.out.println("memberService = " + memberService.getClass());
     }
 
     @GetMapping("/members/new")
